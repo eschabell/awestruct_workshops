@@ -5,92 +5,170 @@ layout: jtebase
 .slides
   %section.title(data-state="cycling" )
     .title-information
-      %h4 Lab 01 - JBoss BRMS installation
+      %h4 Lab 02 - Create a new project
 
   %section.title(data-state="cycling" )
     .title-information
       %h2 Lab Goal
-      %h4 To install and login to JBoss BRMS product
+      %h4 To create a new project in the JBoss BRMS workbench
 
 
-  %section(data-state="cycling" )
+  %section(data-state="" )
     .title-information
-      %h4 Install JBoss BRMS
+      %h4 JBoss BRMS structure
     :markdown
-      * Clone project (brms-install-demo).
+      * JBoss BRMS structures assets as follows (top-down):
+        * Organizations
+        * Reporitories
+        * Projects
+        * Packages
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image04.png" />
+      </div>
 
-        `$ git clone https://github.com/eschabell/brms-install-demo.git`
-
-      * Add products, see installs/README for details.
-
-        `$ cp jboss-eap-6.1.1.zip brms-install-demo/installs/`
-
-        `$ cp jboss-brms-6.0.0.GA-redhat-2-deployable-eap6.x.zip brms-install-demo/installs/`
-
-      * run init.sh or init.bat and follow instructions to start server.
-
-        `./target/jboss-eap-6.1/bin/standalone.sh`
-
-  %section(data-state="brmsinstall" )
+  %section(data-state="" )
     .title-information
-
-  %section(data-state="cycling" )
-    .title-information
-      %h4 JBoss BRMS Standalone Configuration
+      %h4 Add new organizational unit
     :markdown
-      * Some properties set to lock location git repository.
+      * After login you head over to the administration perspective:
 
-      * Found in standalone.xml
+        `AUTHORING -> ADMINISTRATION`
 
-        `$ cat brms-install-demo/support/standalone.xml`
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image05.png" />
+      </div>
 
-        `<property name="org.uberfire.nio.git.dir" value="${jboss.home.dir}/bin"/>`
-
-      * Means all projects stored in .niogit/* can be found here:
-
-        `brms-install-demo/target/jboss-eap-6.1/bin/.niogit/`
-
-  %section(data-state="cycling" )
+  %section(data-state="" )
     .title-information
-      %h4 JBoss BRMS User Configuration
+      %h4 Add new organizational unit
     :markdown
-      * User configuration was automated.
-      * Support directory contains user configuration files.
+      * Now we need to manage organizational units to add a new one:
 
-        `$ cat support/application-users.properties`
+        `ORGANIZATIONAL UNIT -> MANAGE ORGANIZATIONAL UNITS`
 
-        `$ cat support/application-roles.properties`
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image06.png" />
+      </div>
 
-      * Installed into:
-
-        `target/jboss-eap-6.1/standalone/configuration/`
-
-  %section(data-state="cycling" )
+  %section(data-state="" )
     .title-information
-      %h4 JBoss BRMS Available Users
+      %h4 Add new organizational unit
     :markdown
-      * Users have two categories:
-        * admin - access to all suite components.
-        * analyst - access to analyst workbench.
+      * Add button to open new organizational unit:
 
-      * Admin user and password:
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image07.png" />
+      </div>
 
-        `erics  -  bpmsuite`
-
-      * Analyst users:
-
-        `mary  -  bpmsuite`
-
-        `alan  -  bpmsuite`
-
-        `bob  -  bpmsuite`
-
-  %section(data-state="brmslogin" )
+  %section(data-state="" )
     .title-information
+      %h4 Add new organizational unit
+    :markdown
+      * Provide the details
+        * click on `OK`
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image08.png" />
+      </div>
 
-  %section(data-state="brmsdashboard" )
+  %section(data-state="" )
     .title-information
+      %h4 Create a new repository
+    :markdown
+      * We need to create or clone a repository.
+      * JBoss BRMS uses git as repository structure.
+        * we can clone existing git repositories
+        * we can create a new one
+      * For this lab, we create a new repository.
 
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new repository
+    :markdown
+      * Now we add a repository to our organizational unit:
+
+        `REPOSITORIES -> NEW REPOSITORY`
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image10.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new repository
+    :markdown
+      * Provide the details
+        * click on `CREATE`
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image11.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new repository
+    :markdown
+      * You see the popup showing the repository was created.
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image12.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new project
+    :markdown
+      * A project is the main organizational and deployment unit for our business rules assets.
+      * A project is modeled like a maven project.
+        * when deployed, will be deployed as a maven artifact (jar and pom)
+        * when deployed, will be in a maven repo
+        * by default the internal repo from BRMS
+          * it will be ready to be incorporated and consumed by applications.
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new project
+    :markdown
+      * Head over to the project authoring perspective
+
+        `AUTHORING -> PROJECT AUTHORING`
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image13.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new project
+    :markdown
+      * Now create a new project
+
+        `NEW ITEM -> PROJECT`
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image14.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new project
+    :markdown
+      * Provide the details
+        * click on `OK`
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image15.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new project
+    :markdown
+      * Provide the details, click on `FINISH`
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image16.png" />
+      </div>
+
+  %section(data-state="projectcreated" )
+    .title-information
 
   %section(data-state="questions" )
     .title-information
@@ -118,4 +196,4 @@ layout: jtebase
       %h4 Automate Your Business with JBoss Integration & BPM
       %h5
         :markdown
-          * [Lab 02 - Create a new project] (lab02.html)
+          * [Lab 03 - Create domain model ] (lab03.html)
