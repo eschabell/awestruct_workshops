@@ -12,6 +12,28 @@ layout: jtebase
       %h2 Lab Goal
       %h4 To create a new project in the JBoss BRMS workbench
 
+  %section(data-state="" )
+    .title-information
+      %h4 Help / Fast Forward
+    :markdown
+      * In case you get stuck we provided a git repo for every lab.
+      * The git repo for lab02 would take you the end of lab 2, to install it:
+      * from the main menu, select `AUTHORING -> ADMINISTRATION`
+      * then select `REPOSITORIES -> CLONE REPOSITORY`
+      * In the popup window, provide the following data:
+        * `Repository name: coolstore-lab02`
+        * `Organizational unit: Demos`
+        * `Git URL: file:///home/jboss/lab-brms/lab02_new_project/lab_assets/lab02-niogit/coolstore-demo.git`
+
+  %section(data-state="" )
+    .title-information
+      %h4 Help / Fast Forward
+    :markdown
+      * A clean way to start fresh (alternative to cloning):
+        * stop server
+        * `rm -rf brms-install-demo/target/jboss-eap-6.1/bin/.niogit`
+        * `cp -rv lab02_new_project/lab_assets/lab02-niogit (SPACE) brms-install-demo/target/jboss-eap-6.1/bin/.niogit`
+        * restart server and login to find lab02 project
 
   %section(data-state="" )
     .title-information
