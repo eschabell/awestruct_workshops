@@ -10,121 +10,12 @@ layout: jtebase
   %section.title(data-state="cycling" )
     .title-information
       %h2 Lab Goal
-      %h4 To create a new domain model with the JBoss BRMS domain modeller
+      %h4 To create a new domain model with the JBoss BRMS domain modeler
 
 
   %section(data-state="" )
     .title-information
-      %h4 JBoss BRMS structure
-    :markdown
-      * JBoss BRMS structures assets as follows (top-down):
-        * Organizations
-        * Reporitories
-        * Projects
-        * Packages
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image04.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Add new organizational unit
-    :markdown
-      * After login you head over to the administration perspective:
-
-        `AUTHORING -> ADMINISTRATION`
-
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image05.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Add new organizational unit
-    :markdown
-      * Now we need to manage organizational units to add a new one:
-
-        `ORGANIZATIONAL UNIT -> MANAGE ORGANIZATIONAL UNITS`
-
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image06.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Add new organizational unit
-    :markdown
-      * Add button to open new organizational unit:
-
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image07.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Add new organizational unit
-    :markdown
-      * Provide the details
-        * click on `OK`
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image08.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Create a new repository
-    :markdown
-      * We need to create or clone a repository.
-      * JBoss BRMS uses git as repository structure.
-        * we can clone existing git repositories
-        * we can create a new one
-      * For this lab, we create a new repository.
-
-  %section(data-state="" )
-    .title-information
-      %h4 Create a new repository
-    :markdown
-      * Now we add a repository to our organizational unit:
-
-        `REPOSITORIES -> NEW REPOSITORY`
-
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image10.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Create a new repository
-    :markdown
-      * Provide the details
-        * click on `CREATE`
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image11.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Create a new repository
-    :markdown
-      * You see the popup showing the repository was created.
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image12.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Create a new project
-    :markdown
-      * A project is the main organizational and deployment unit for our business rules assets.
-      * A project is modeled like a maven project.
-        * when deployed, will be deployed as a maven artifact (jar and pom)
-        * when deployed, will be in a maven repo
-        * by default the internal repo from BRMS
-          * it will be ready to be incorporated and consumed by applications.
-
-  %section(data-state="" )
-    .title-information
-      %h4 Create a new project
+      %h4 Create a new domain model
     :markdown
       * Head over to the project authoring perspective
 
@@ -136,39 +27,163 @@ layout: jtebase
 
   %section(data-state="" )
     .title-information
-      %h4 Create a new project
+      %h4 Create a new domain model
     :markdown
-      * Now create a new project
+      * Open the domain modeler
 
-        `NEW ITEM -> PROJECT`
+        `TOOLS -> DATA MODELER`
 
       <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image14.png" />
+        <img src="/images/brms_bpms_workshop/image18.png" />
       </div>
 
   %section(data-state="" )
     .title-information
-      %h4 Create a new project
+      %h4 Create a new domain model
     :markdown
-      * Provide the details
-        * click on `OK`
+      * Create Product
+        * in top right corner click on `+CREATE` button
 
       <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image15.png" />
+        <img src="/images/brms_bpms_workshop/image19.png" />
       </div>
 
   %section(data-state="" )
     .title-information
-      %h4 Create a new project
+      %h4 Create a new domain model
     :markdown
-      * Provide the details, click on `FINISH`
+      * Create Product and click `+OK` to get started
 
       <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image16.png" />
+        <img src="/images/brms_bpms_workshop/image20.png" />
       </div>
 
-  %section(data-state="projectcreated" )
+  %section(data-state="" )
     .title-information
+      %h4 Create a new domain model
+    :markdown
+      * Add all fields as shown, hitting `+CREATE` to add each one
+        * `desc, Description, STRING`
+        * `itemId, Item ID, STRING`
+        * `name, Name, STRING`
+        * `price, Price, DOUBLE`
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image21.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new domain model
+    :markdown
+      * Finished Product object in our data model
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image22.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new domain model
+    :markdown
+      * Finished Product object in our data model
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image22.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new domain model
+    :markdown
+      * Add the PromoEvent object to our data model
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image23.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new domain model
+    :markdown
+      * PromoEvent is an `EVENT` object, so add this as it's `ROLE`
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image24.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new domain model
+    :markdown
+      * Add all fields to PromoEvent
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image25.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new domain model
+    :markdown
+      * Create ShoppingCart object
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image26.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new domain model
+    :markdown
+      * Add all fields for ShoppingCart object
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image27.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new domain model
+    :markdown
+      * Create ShoppingCartItem object
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image28.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new domain model
+    :markdown
+      * Add all fields for ShoppingCartItem object
+        * note: `shoppingCart` is object found in Type drop down menu
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image29.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Create a new domain model
+    :markdown
+      * Now we add a `ShoppingCartItemList` to ShoppingCart object
+        * note: `ShoppingCartItem [0..N]` is found in Type drop down menu
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image30.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Save domain model
+    :markdown
+      * click on `SAVE` button to persist domain model
+      * pop-up bar should say  `Data model was saved`
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image31.png" />
+      </div>
 
   %section(data-state="questions" )
     .title-information
@@ -196,4 +211,4 @@ layout: jtebase
       %h4 Automate Your Business with JBoss Integration & BPM
       %h5
         :markdown
-          * [Lab 03 - Create domain model ] (lab03.html)
+          * [Lab 04 - Create rules ] (lab04.html)
