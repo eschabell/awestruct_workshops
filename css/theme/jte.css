@@ -157,6 +157,15 @@ body {
 
 }
 
+.fastforward .reveal{
+
+    background-image: url("/images/brms_bpms_workshop/image32.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}
+
 .projectcreated .reveal{
 
     background-image: url("/images/brms_bpms_workshop/image17.png");
