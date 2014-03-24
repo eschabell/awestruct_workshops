@@ -12,13 +12,18 @@ layout: jtebase
       %h2 Lab Goal
       %h4 To create guided rules calculating shopping cart totals, totaling shopping cart items, and apply promotions for Cool Store
 
-
-
   %section(data-state="" )
     .title-information
       %h4 Creating guided rules
     :markdown
       * First we will create a new guided rule `Total Shopping Cart`
+
+        `AUTHORING -> PROJECT AUTHORING -> NEW ITEM -> GUIDED RULE`
+
+        `RESOURCE NAME: Total Shopping Cart`
+
+        `(don't check the DSL box this time)`
+
         * The condition (WHEN) is:
 
           `There is a ShoppingCart`
@@ -31,131 +36,27 @@ layout: jtebase
 
   %section(data-state="" )
     .title-information
-      %h4 Create a new Domain Specific Language
+      %h4 Creating guided rules
     :markdown
-      * We need to create a language for Promotion rules.
-      * Create a DSL that allows business to determine threshold for free shipping:
-        * `If customer spends X amount, then apply free shipping`
-      * Go on to next slide to see how we design our DSL.
+      * The action (THEN) is a two part action
+        * We want to operate on the given ShoppingCart ($sc):
 
-  %section(data-state="" )
-    .title-information
-      %h4 Create a new Domain Specific Language
-    :markdown
-      * Head over to the project authoring perspective
+          `Modify the value of ShoppingCart field cartTotal to 0`
 
-        `AUTHORING -> PROJECT AUTHORING`
+          `Modify the value of ShoppingCart field cartItemPromoSavings to following formula`
 
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image13.png" />
-      </div>
+          `formula: ($sc.cartItemPromoSavings == 0.0) ? 0.0 : $sc.cartItemPromoSavings * -1`
 
-  %section(data-state="" )
-    .title-information
-      %h4 Create a new Domain Specific Language
-    :markdown
-      * Create our new DSL:
+        * expand the 'show options' and add:
 
-        `New Item -> DSL DEFINITION`
+          `check 'no-loop'`
 
-        `RESOURCE NAME: Promotions DSL`
+          `RULEFLOW-GROUP: total-rules`
 
-        `+OK`
+        <div style="float: right">
+          <img src="/images/brms_bpms_workshop/image42.png" />
+        </div>
 
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image33.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Create a new Domain Specific Language
-    :markdown
-      * You now have an empty text field to enter your DSL
-      * It is a definition divided into a WHEN and THEN section
-        * WHEN - here we decide what has to happen
-        * `'If customer spends X'`
-        * THEN - this is the results applied if WHEN happens
-        * `'apply free shipping'`, which is a formula we supply
-      * `SAVE` your DSL when finished.
-
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image34.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Create a Guided Rule using your DSL
-    :markdown
-      * We next will create a rule using the DSL we created
-      * Create a new guided rule
-
-        `NEW ITEM -> GUIDED RULE`
-
-        `RESOURCE NAME: Free Shipping Promotion DSL`
-
-        `CHECK 'Use Domain Specific Language (DSL)' BOX`
-
-        `+OK`
-
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image35.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Create a Guided Rule using your DSL
-    :markdown
-      * The guided rule editor is now before you, but empty.
-      * Note the `+` signs on the right, it opens a list of options
-      * Top `+` is for the WHEN (condition) section of our rule
-        * pop-up shows overview of all possibilities, but we want DSL conditions
-        * check the `Only display DSL conditions` box
-
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image36.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Create a Guided Rule using your DSL
-    :markdown
-      * Now let us create our condition (WHEN):
-
-        `If customer spends $75`
-
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image37.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Create a Guided Rule using your DSL
-    :markdown
-      * Note that the added DSL line has a `VAR` field
-        * this marks a field where we can add a dollar value
-      * next we need to add an action (THEN)
-        * use the `+` at the THEN level of the designer to add:
-
-          `Apply Free Shipping`
-
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image38.png" />
-      </div>
-
-  %section(data-state="" )
-    .title-information
-      %h4 Create a Guided Rule using your DSL
-    :markdown
-      * Save the rule.
-      * Ensure your package builds:
-
-        `TOOLS -> PROJECT EDITOR -> BUILD & DEPLOY`
-
-        `(should see green pop-up 'Build Successful')`
-
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image39.png" />
-      </div>
 
   %section(data-state="projectbuild" )
     .title-information
