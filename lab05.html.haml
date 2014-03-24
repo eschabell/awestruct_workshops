@@ -5,21 +5,29 @@ layout: jtebase
 .slides
   %section.title(data-state="cycling" )
     .title-information
-      %h4 Lab 04 - Create a Domain Specific Language (DSL)
+      %h4 Lab 05 - Create Guided Rules
 
   %section.title(data-state="cycling" )
     .title-information
       %h2 Lab Goal
-      %h4 To create DSL ann guided rule based on DSL to calculate free shipping threshold for Cool Store
+      %h4 To create guided rules calculating shopping cart totals, totaling shopping cart items, and apply promotions for Cool Store
+
+
 
   %section(data-state="" )
     .title-information
-      %h4 Create a new Domain Specific Language
+      %h4 Creating guided rules
     :markdown
-      * First we will start with a Domain Specific Language (DSL)
-        * we will create an English DSL for our analysts
-        * this allows you to target the domain terms
-        * business users can then easily design rules
+      * First we will create a new guided rule `Total Shopping Cart`
+        * The condition (WHEN) is:
+
+          `There is a ShoppingCart`
+
+        * assign a variable name to this ShoppingCart `$sc`
+
+        <div style="float: right">
+          <img src="/images/brms_bpms_workshop/image41.png" />
+        </div>
 
   %section(data-state="" )
     .title-information
