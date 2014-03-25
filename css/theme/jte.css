@@ -184,6 +184,15 @@ body {
 
 }
 
+.builddrl .reveal{
+
+    background-image: url("/images/brms_bpms_workshop/image53.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: auto;
+
+}
+
 .projectcreated .reveal{
 
     background-image: url("/images/brms_bpms_workshop/image17.png");
