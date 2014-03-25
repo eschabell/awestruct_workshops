@@ -93,12 +93,20 @@ layout: jtebase
         * close the left pane, open the right 'Properties' pane
         * double click on the first business rule task
         * pop-up text box to fill in name: `'Apply Cart Promotions'`
-        * on enter it appears in node, and in Properties panel 'Name' field
 
         <div style="float: right">
           <img src="/images/brms_bpms_workshop/image77.png" />
-          <img src="/images/brms_bpms_workshop/image78.png" />
         </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Creating Rule Flow Process
+    :markdown
+      * On enter it appears in node, and in Properties panel 'Name' field
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image78.png" />
+      </div>
 
   %section(data-state="" )
     .title-information
@@ -116,14 +124,60 @@ layout: jtebase
           <img src="/images/brms_bpms_workshop/image80.png" />
         </div>
 
+  %section(data-state="" )
+    .title-information
+      %h4 Creating Rule Flow Process
+    :markdown
+      * At this point we need to associate a rule set with each task
+      * This is done by assigning a 'Ruleflow Group'
+        * click on business rule task 'Apply Cart Promotions'
+        * in right pane add `'promo-cart-rules`' to 'Ruleflow Group' field
+        * hit enter to finalize the field
 
-
+        <div style="float: right">
+          <img src="/images/brms_bpms_workshop/image81.png" />
+        </div>
 
   %section(data-state="" )
     .title-information
       %h4 Creating Rule Flow Process
     :markdown
-      * Save the rule.
+      * Set the following business rule tasks 'Ruleflow Group' fields:
+        * Total Shopping Cart Items == `'pricing-rules'`
+        * Calculate Shipping == `'shipping-rules'`
+        * Apply Shipping Promotions == `'promo-rules'`
+        * Total Shopping Cart == `'total-rules'`
+
+  %section(data-state="" )
+    .title-information
+      %h4 Creating Rule Flow Process
+    :markdown
+      * The final task is to make process business presentable
+      * A unique feature is the color coding of your process
+        * Green is our business rule task color
+        * select a business rule task
+        * open right 'Properties' pane
+        * in 'Graphical Settings' set 'Background Color' to green
+
+        <div style="float: right">
+          <img src="/images/brms_bpms_workshop/image82.png" />
+        </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Creating Rule Flow Process
+    :markdown
+      * Color the rest of the business rule tasks
+
+        <div style="float: right">
+          <img src="/images/brms_bpms_workshop/image83.png" />
+        </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Creating Rule Flow Process
+    :markdown
+      * Save the rule
       * Ensure your package builds:
 
         `TOOLS -> PROJECT EDITOR -> BUILD & DEPLOY`
