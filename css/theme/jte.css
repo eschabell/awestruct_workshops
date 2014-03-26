@@ -202,6 +202,15 @@ body {
 
 }
 
+.buildtests .reveal{
+
+    background-image: url("/images/brms_bpms_workshop/image120.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: auto;
+
+}
+
 .buildprocess .reveal{
 
     background-image: url("/images/brms_bpms_workshop/image84.png");
