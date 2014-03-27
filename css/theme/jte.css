@@ -229,6 +229,33 @@ body {
 
 }
 
+.bpmsinstall .reveal{
+
+    background-image: url("/images/brms_bpms_workshop/image122.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: auto;
+
+}
+
+.bpmslogin .reveal{
+
+    background-image: url("/images/brms_bpms_workshop/image123.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}
+
+.bpmsdashboard .reveal{
+
+    background-image: url("/images/brms_bpms_workshop/image124.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}
+
 .whatisbrms .reveal{
 
     background-image: url("/images/jteimages/image2.png");
