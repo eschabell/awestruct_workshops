@@ -5,91 +5,108 @@ layout: jtebase
 .slides
   %section.title(data-state="cycling" )
     .title-information
-      %h4 Lab 10 - Install JBoss BPM Suite
+      %h4 Lab 10 - Running the Cool Store Demo
 
   %section.title(data-state="cycling" )
     .title-information
       %h2 Lab Goal
-      %h4 To install and login to JBoss BPM Suite product
+      %h4 To install the shopping cart web application and run the Cool Store Demo
 
 
   %section(data-state="cycling" )
     .title-information
-      %h4 Install JBoss BPM Suite
+      %h4 Install the Cool Store shopping cart web application
     :markdown
-      * Clone project (bpms-install-demo).
+      * You can obtain the brms-coolstore-demo.war in the Cool Store demo project.
 
-        `$ git clone https://github.com/eschabell/bpms-install-demo.git`
+        `$ git clone https://github.com/eschabell/brms-coolstore-demo.git`
 
-      * Add products, see installs/README for details.
+      * Deploy the web application into your brms-install-demo project.
 
-        `$ cp jboss-eap-6.1.1.zip brms-install-demo/installs/`
+        `$ cd brms-coolstore-demo`
 
-        `$ cp jboss-bpms-6.0.1.GA-redhat-3-deployable-eap6.x.zip bpms-install-demo/installs/`
+        `$ git checkout 6.0.1`
 
-      * run init.sh or init.bat and follow instructions to start server.
+        `$ cp support/brms-coolstore-demo.war brms-install-demo/target/jboss-eap-6.1/standalone/deployments/`
 
-        `./target/jboss-eap-6.1/bin/standalone.sh`
-
-  %section(data-state="bpmsinstall" )
-    .title-information
 
   %section(data-state="cycling" )
     .title-information
-      %h4 JBoss BPM Suite Standalone Configuration
+      %h4 Welcome to the Cool Store
     :markdown
-      * Some properties set to lock location git repository.
+      * Start the JBoss BRMS server
+      * Open the Cool Store web application:
 
-      * Found in standalone.xml
+        `http://localhost:8080/brms-coolstore-demo`
 
-        `$ cat bpms-install-demo/support/standalone.xml`
-
-        `<property name="org.uberfire.nio.git.dir" value="${jboss.home.dir}/bin"/>`
-
-      * Means all projects stored in .niogit/* can be found here:
-
-        `bpms-install-demo/target/jboss-eap-6.1/bin/.niogit/`
+        <div style="float: right">
+          <img src="/images/brms_bpms_workshop/image125.png" />
+        </div>
 
   %section(data-state="cycling" )
     .title-information
-      %h4 JBoss BPM Suite User Configuration
+      %h4 Demo the Cool Store
     :markdown
-      * User configuration was automated.
-      * Support directory contains user configuration files.
+      * A simple demo shows changing shipping decision table values, picked up live in web application
+        * select `'Forge Laptop Sticker ($8.50)'` and click `'ADD TO CART'` button
+        * note shipping calculated to `'2.99'`
 
-        `$ cat support/application-users.properties`
-
-        `$ cat support/application-roles.properties`
-
-      * Installed into:
-
-        `target/jboss-eap-6.1/standalone/configuration/`
+        <div style="float: right">
+          <img src="/images/brms_bpms_workshop/image126.png" />
+          <img src="/images/brms_bpms_workshop/image127.png" />
+        </div>
 
   %section(data-state="cycling" )
     .title-information
-      %h4 JBoss BPM Suite Available Users
+      %h4 Demo the Cool Store
     :markdown
-      * Users have two categories:
-        * admin - access to all suite components.
-        * analyst - access to analyst workbench.
+      * Now change the decision table shipping value in the JBoss BRMS dashboard
+        * login and open the decision table `'Shipping Rules'`
+        * change the `'Shipping Tier 1' 'Shipping Total'` value to `'22.99'`
 
-      * Admin user and password:
+        <div style="float: right">
+          <img src="/images/brms_bpms_workshop/image128.png" />
+          <img src="/images/brms_bpms_workshop/image129.png" />
+        </div>
 
-        `erics  -  bpmsuite`
-
-      * Analyst users:
-
-        `mary  -  bpmsuite`
-
-        `alan  -  bpmsuite`
-
-        `bob  -  bpmsuite`
-
-  %section(data-state="bpmslogin" )
+  %section(data-state="cycling" )
     .title-information
+      %h4 Demo the Cool Store
+    :markdown
+      * Save the rule
+      * In poject editor we need to release a new version of our project
+      * Bump up the Version ID:
 
-  %section(data-state="bpmsdashboard" )
+        `TOOLS -> PROJECT EDITOR`
+
+        `VERSION ID: 2.0.1`
+
+        <div style="float: right">
+          <img src="/images/brms_bpms_workshop/image130.png" />
+        </div>
+
+  %section(data-state="" )
     .title-information
+      %h4 Demo the Cool Store
+    :markdown
+      * Ensure your package builds:
+
+        `TOOLS -> PROJECT EDITOR -> BUILD & DEPLOY`
+
+        `(should see green pop-up 'Build Successful')`
+
+  %section(data-state="cycling" )
+    .title-information
+      %h4 Demo the Cool Store
+    :markdown
+      * Clear the values in the Cool Store shopping cart and re-run the previous purchase
+        * select `'Forge Laptop Sticker ($8.50)'` and click `'ADD TO CART'` button
+        * note shipping calculated to `'22.99'`
+
+        <div style="float: right">
+          <img src="/images/brms_bpms_workshop/image126.png" />
+          <img src="/images/brms_bpms_workshop/image131.png" />
+        </div>
 
   %section(data-state="questions" )
     .title-information
@@ -116,4 +133,4 @@ layout: jtebase
       %h4 Automate Your Business with JBoss Integration & BPM
       %h5
         :markdown
-          * [Lab 11 - Create a new project] (lab11.html)
+          * [Lab 11 - Install JBoss BPM Suite] (lab11.html)
