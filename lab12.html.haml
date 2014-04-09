@@ -17,16 +17,14 @@ layout: jtebase
       %h4 Help / Fast Forward
     :markdown
       * In case you get stuck we provided a git repo containing all assets
-      * download: [generic-loan-demo.git.zip] (generic-loan-demo.git.zip)
-      * unzip repo on your system
       * from the main menu, select `AUTHORING -> ADMINISTRATION`
       * then select `REPOSITORIES -> CLONE REPOSITORY`
       * In the popup window, provide the following data:
-        * `Repository name: rewards-demo`
-        * `Organizational unit: Processes`
-        * `Git URL: file:///{path-to-unzipped}/generic-loan-demo.git`
+        * `Repository name: generic-loan`
+        * `Organizational unit: Demos`
+        * `Git URL: https://github.com/eschabell/bpm-suite-generic-loan-repo.git`
 
-  %section(data-state="fastforward" )
+  %section(data-state="ffbpms" )
     .title-information
 
   %section(data-state="" )
@@ -91,23 +89,22 @@ layout: jtebase
       %h4 Create a new repository
     :markdown
       * We need to create or clone a repository.
-      * JBoss BRMS uses git as repository structure.
+      * JBoss BPM Suite uses git as repository structure.
         * we can clone existing git repositories.
         * we can create a new one.
-      * For this lab, we create a new repository.
-        * creating a retail application.
-        * the Cool Store online web shop.
+      * For this lab, we clone an existing repository.
+        * the Generic Loan Demo repository
 
   %section(data-state="" )
     .title-information
       %h4 Create a new repository
     :markdown
-      * Now we add a repository to our organizational unit:
+      * Now we clone the repository using our organizational unit:
 
-        `REPOSITORIES -> NEW REPOSITORY`
+        `REPOSITORIES -> CLONE REPOSITORY`
 
       <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image10.png" />
+        <img src="/images/brms_bpms_workshop/image133.png" />
       </div>
 
   %section(data-state="" )
@@ -115,9 +112,12 @@ layout: jtebase
       %h4 Create a new repository
     :markdown
       * Provide the details
-        * click on `CREATE`
+        * `Repository Name: generi-loan`
+        * `Organizational Unit: Demos`
+        * `Git URL: https://github.com/eschabell/bpm-suite-generic-loan-repo.git`
+        * click on `CLONE`
       <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image11.png" />
+        <img src="/images/brms_bpms_workshop/image134.png" />
       </div>
 
   %section(data-state="" )
@@ -126,12 +126,12 @@ layout: jtebase
     :markdown
       * You see the popup showing the repository was created.
       <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image12.png" />
+        <img src="/images/brms_bpms_workshop/image135.png" />
       </div>
 
   %section(data-state="" )
     .title-information
-      %h4 Create a new project
+      %h4 Explore the project  (TODO)
     :markdown
       * A project is the main organizational and deployment unit for our business rules assets.
       * A project is modeled like a maven project.
@@ -142,7 +142,7 @@ layout: jtebase
 
   %section(data-state="" )
     .title-information
-      %h4 Create a new project
+      %h4 Explore the project  (TODO)
     :markdown
       * Head over to the project authoring perspective
 
@@ -154,7 +154,7 @@ layout: jtebase
 
   %section(data-state="" )
     .title-information
-      %h4 Create a new project
+      %h4 Explore the project  (TODO)
     :markdown
       * Now create a new project
 
@@ -166,7 +166,7 @@ layout: jtebase
 
   %section(data-state="" )
     .title-information
-      %h4 Create a new project
+      %h4 Explore the project  (TODO)
     :markdown
       * Provide the details
         * click on `OK`
@@ -177,7 +177,7 @@ layout: jtebase
 
   %section(data-state="" )
     .title-information
-      %h4 Create a new project
+      %h4 Explore the project  (TODO)
     :markdown
       * Provide the details, click on `FINISH`
 
