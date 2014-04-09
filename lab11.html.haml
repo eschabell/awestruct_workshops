@@ -12,6 +12,14 @@ layout: jtebase
       %h2 Lab Goal
       %h4 To install and login to JBoss BPM Suite product
 
+  %section(data-state="cycling" )
+    .title-information
+      %h4 Install JBoss BRMS
+    :markdown
+      * Preamble Red Hat Summit Labs:
+        * products JBoss BRMS / BPM Suite / EAP in `'Download'` directory
+        * your projects for lab found in `'Desktop/projects/*'`
+        * you should NOT need to clone anything, already done for you!
 
   %section(data-state="cycling" )
     .title-information
@@ -25,7 +33,7 @@ layout: jtebase
 
         `$ cp jboss-eap-6.1.1.zip brms-install-demo/installs/`
 
-        `$ cp jboss-bpms-6.0.1.GA-redhat-3-deployable-eap6.x.zip bpms-install-demo/installs/`
+        `$ cp jboss-bpms-6.0.1.GA-redhat-4-deployable-eap6.x.zip bpms-install-demo/installs/`
 
       * run init.sh or init.bat and follow instructions to start server.
 
@@ -90,6 +98,8 @@ layout: jtebase
       %h4 Login to the JBoss BRMS dashboard
     :markdown
       * http://localhost:8080/business-central
+        * user: erics
+        * passwd: bpmsuite
 
   %section(data-state="bpmslogin" )
     .title-information
