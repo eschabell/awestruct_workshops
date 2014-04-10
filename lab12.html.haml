@@ -36,6 +36,7 @@ layout: jtebase
         * Reporitories
         * Projects
         * Packages
+
       <div style="float: right">
         <img src="/images/brms_bpms_workshop/image04.png" />
       </div>
@@ -80,6 +81,7 @@ layout: jtebase
     :markdown
       * Provide the details
         * click on `OK`
+
       <div style="float: right">
         <img src="/images/brms_bpms_workshop/image08.png" />
       </div>
@@ -116,6 +118,7 @@ layout: jtebase
         * `Organizational Unit: Demos`
         * `Git URL: https://github.com/eschabell/bpm-suite-generic-loan-repo.git`
         * click on `CLONE`
+
       <div style="float: right">
         <img src="/images/brms_bpms_workshop/image134.png" />
       </div>
@@ -125,68 +128,106 @@ layout: jtebase
       %h4 Clone existing repository
     :markdown
       * You see the popup showing the repository was created.
+
       <div style="float: right">
         <img src="/images/brms_bpms_workshop/image135.png" />
       </div>
 
   %section(data-state="" )
     .title-information
-      %h4 Explore the project  (TODO)
+      %h4 Explore the project
     :markdown
-      * A project is the main organizational and deployment unit for our business rules assets.
-      * A project is modeled like a maven project.
-        * when deployed, will be deployed as a maven artifact (jar and pom)
-        * when deployed, will be in a maven repo
-        * by default the internal repo from BRMS
-          * it will be ready to be incorporated and consumed by applications.
+      * We can now explore the Generic Loan project
+      * First switch to project authoring perspective
+        * `AUTHORING -> PROJECT AUTHORING`
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image138.png" />
+      </div>
+
 
   %section(data-state="" )
     .title-information
-      %h4 Explore the project  (TODO)
+      %h4 Explore the project
     :markdown
-      * Head over to the project authoring perspective
-
-        `AUTHORING -> PROJECT AUTHORING`
+      * Should see the various project artifacts in the left panel
+        * if not, open with the '+' and move down to the 'loan' folder of project
 
       <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image13.png" />
+        <img src="/images/brms_bpms_workshop/image139.png" />
       </div>
 
   %section(data-state="" )
     .title-information
-      %h4 Explore the project  (TODO)
+      %h4 Explore the project
     :markdown
-      * Now create a new project
-
-        `NEW ITEM -> PROJECT`
+      * View the technical rules in DRL Editor
+        * to see how to create technical rules, see [lab 06] (/lab06.html)
 
       <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image14.png" />
+        <img src="/images/brms_bpms_workshop/image140.png" />
+        <img src="/images/brms_bpms_workshop/image141.png" />
       </div>
 
   %section(data-state="" )
     .title-information
-      %h4 Explore the project  (TODO)
+      %h4 Explore the project
     :markdown
-      * Provide the details
-        * click on `OK`
+      * View the guided rules in the guided rule editor
+        * to see how to create guided rules, see [lab 05] (/lab05.html)
 
       <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image15.png" />
+        <img src="/images/brms_bpms_workshop/image142.png" />
       </div>
 
   %section(data-state="" )
     .title-information
-      %h4 Explore the project  (TODO)
+      %h4 Explore the project
     :markdown
-      * Provide the details, click on `FINISH`
+      * View the data model
+        * you can view this via the `Java Source Files` or via `Data Modeler`
+        * `AUTHORING -> PROJECT AUTHORING -> TOOLS -> DATA MODELER`
+        * to see how to create the data model, see [lab 03] (/lab03.html)
 
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image16.png" />
+      <div align="center">
+        <img src="/images/brms_bpms_workshop/image143.png" />
       </div>
 
-  %section(data-state="projectcreated" )
+  %section(data-state="" )
     .title-information
+      %h4 Explore the project (TODO)
+    :markdown
+      * View the business process in the process designer
+        * to see how to create a process, see ruleflow [lab 08] (/lab08.html)
+        * more details from instructor (swimlanes, user tasks, etc)
+
+      <div align="center">
+        <img src="/images/brms_bpms_workshop/image144.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Explore the project (TODO)
+    :markdown
+      * View the task form definitions in form modeler
+        * `ro.bull.bpm.examples.loan.LoanApp-taskform` : summit on starting process instance
+        * `OfficerApprove-taskform` : initial form to summit on starting process instance
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image145.png" />
+        <img src="/images/brms_bpms_workshop/image146.png" />
+      </div>
+
+  %section(data-state="" )
+    .title-information
+      %h4 Running the Generic Loan demo (TODO)
+    :markdown
+      * View the task form definitions in form modeler
+        * `ro.bull.bpm.examples.loan.LoanApp-taskform` : summit on starting process instance
+
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image146.png" />
+      </div>
 
   %section(data-state="questions" )
     .title-information
@@ -213,4 +254,4 @@ layout: jtebase
       %h4 Automate Your Business with JBoss Integration & BPM
       %h5
         :markdown
-          * [Lab 03 - Create domain model ] (lab03.html)
+          * [Lab 13 - Running the Generic Loan Demo ] (lab13.html)
