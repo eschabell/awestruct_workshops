@@ -161,12 +161,13 @@ layout: jtebase
     .title-information
       %h4 Explore the project
     :markdown
-      * View the technical rules in DRL Editor
-        * to see how to create technical rules, see [lab 06] (/lab06.html)
+      * View the data model
+        * you can view the `Java Source Files` or in graphical `Data Modeler`
+        * `AUTHORING -> PROJECT AUTHORING -> TOOLS -> DATA MODELER`
+        * to see how to create a data model, see [lab 03] (/lab03.html)
 
-      <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image140.png" />
-        <img src="/images/brms_bpms_workshop/image141.png" />
+      <div align="center">
+        <img src="/images/brms_bpms_workshop/image143.png" />
       </div>
 
   %section(data-state="" )
@@ -184,22 +185,21 @@ layout: jtebase
     .title-information
       %h4 Explore the project
     :markdown
-      * View the data model
-        * you can view this via the `Java Source Files` or via `Data Modeler`
-        * `AUTHORING -> PROJECT AUTHORING -> TOOLS -> DATA MODELER`
-        * to see how to create the data model, see [lab 03] (/lab03.html)
+      * View the technical rules in DRL Editor
+        * to see how to create technical rules, see [lab 06] (/lab06.html)
 
-      <div align="center">
-        <img src="/images/brms_bpms_workshop/image143.png" />
+      <div style="float: right">
+        <img src="/images/brms_bpms_workshop/image140.png" />
+        <img src="/images/brms_bpms_workshop/image141.png" />
       </div>
 
   %section(data-state="" )
     .title-information
-      %h4 Explore the project (TODO)
+      %h4 Explore the project
     :markdown
       * View the business process in the process designer
-        * to see how to create a process, see ruleflow [lab 08] (/lab08.html)
-        * more details from instructor (swimlanes, user tasks, etc)
+        * to see how to create a process, see [lab 08] (/lab08.html)
+        * has gateways, script tasks, rule tasks, signal, and user task
 
       <div align="center">
         <img src="/images/brms_bpms_workshop/image144.png" />
@@ -207,11 +207,12 @@ layout: jtebase
 
   %section(data-state="" )
     .title-information
-      %h4 Explore the project (TODO)
+      %h4 Explore the project
     :markdown
-      * View the task form definitions in form modeler
-        * `ro.bull.bpm.examples.loan.LoanApp-taskform` : summit on starting process instance
-        * `OfficerApprove-taskform` : initial form to summit on starting process instance
+      * Inspect the task form definitions in form modeler
+        * `ro.bull.bpm.examples.loan.LoanApp-taskform` : submit to start process instance
+        * `OfficerApprove-taskform` : user task loan approval form
+      * See next page for details on various aspects of form modeler
 
       <div style="float: right">
         <img src="/images/brms_bpms_workshop/image145.png" />
@@ -220,13 +221,24 @@ layout: jtebase
 
   %section(data-state="" )
     .title-information
-      %h4 Running the Generic Loan demo (TODO)
+      %h4 Explore the project
     :markdown
-      * View the task form definitions in form modeler
-        * `ro.bull.bpm.examples.loan.LoanApp-taskform` : summit on starting process instance
+      * Various tabs for various editing in Form Modeler
+        * `form properties` -> editor for form properties
+        * `add fields by type` -> create fields by using html elements
+        * `add fields by origin` -> shows available data model fields (empty, all attributes added)
+        * `form data origin` -> maps data sources to form fields
 
+  %section(data-state="" )
+    .title-information
+      %h4 Explore the project
+    :markdown
+      * Work item definitions
+        * for custom work items (domain specific nodes)
+        * shows `EMAIL` and `LOG` items, found in designer `Service Tasks`
+        * each entry backed by an implementation, see JBoss BPM Suite documentation
       <div style="float: right">
-        <img src="/images/brms_bpms_workshop/image146.png" />
+        <img src="/images/brms_bpms_workshop/image147.png" />
       </div>
 
   %section(data-state="questions" )
@@ -246,8 +258,8 @@ layout: jtebase
         * <font size="5">[_http://www.schabell.org/2013/12/bpms-examining-migrated-customer-evaluation-demo.html_] (http://www.schabell.org/2013/12/bpms-examining-migrated-customer-evaluation-demo.html)</font>
         * <font size="5">[_https://github.com/eschabell/business-resource-optimizer-demo_] (https://github.com/eschabell/business-resource-optimizer-demo)</font>
       * JBoss xPaaS Demos
-        * <font size="5">[_https://github.com/eschabell/bpms-bam-dashboard_] (https://github.com/eschabell/bpms-bam-dashboard)</font>
-        * <font size="5">[_https://github.com/eschabell/openshift-bpm-bam-dashboard_] (https://github.com/eschabell/openshift-bpm-bam-dashboard)</font>
+        * <font size="5">[_https://github.com/eschabell/cartridge-bpmPaaS_] (https://github.com/eschabell/cartridge-bpmPaaS)</font>
+        * <font size="5">[_https://github.com/eschabell/cartridge-bpmPaaS-generic-loan-demo_] (https://github.com/eschabell/cartridge-bpmPaaS-generic-loan-demo)</font>
 
   %section.title(data-state="cycling" )
     .title-information
