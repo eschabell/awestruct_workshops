@@ -16,6 +16,18 @@ layout: jtebase
     .title-information
       %h4 Creating rules (DRL)
     :markdown
+      * Technical rules generally not created here:
+        * developer teams tend authors technical rules
+        * they are then uploaded to the repository
+        * they appear here in a free form editor
+        * there is no syntax help in editor (caution...)
+        * business users advised to stick with guided rule editors
+        * for completeness we create one technical rule here...
+
+  %section(data-state="" )
+    .title-information
+      %h4 Creating rules (DRL)
+    :markdown
       * First we will create a new rule:
 
         `AUTHORING -> PROJECT AUTHORING -> NEW ITEM -> DRL FILE`
@@ -31,15 +43,20 @@ layout: jtebase
       %h4 Creating rules (DRL)
     :markdown
       * Presented with an empty free text editor for our rule (DRL)
-      * add package name
+      * add package name:
         * `package com.redhat.coolstore`
-      * add basic rule outline
-        * `rule "Total Shopping Cart Items"`
-        * `   ruleflow-group "pricing-rules"`
-        * `   no-loop true`
-        * `   when`
-        * `   then`
-        * `end`
+
+  %section(data-state="" )
+    .title-information
+      %h4 Creating rules (DRL)
+    :markdown
+      * Add basic rule outline, noting indentation:
+
+        `rule "Total Shopping Cart Items"`
+
+        `ruleflow-group "pricing-rules"`
+
+        `no-loop true`, `when`, `then`, `end`
 
         <div style="float: right">
           <img src="/images/brms_bpms_workshop/image50.png" />
