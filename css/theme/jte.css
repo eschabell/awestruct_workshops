@@ -274,6 +274,15 @@ body {
 
 }
 
+.ffrewards .reveal{
+
+    background-image: url("/images/brms_bpms_workshop/image176.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: auto;
+
+}
+
 
 .whatisbrms .reveal{
 
