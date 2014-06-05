@@ -1,7 +1,7 @@
 # author is used in the atom feed
-title: Red Hat JBoss Integration BPM
+title: JBoss Technology Evangelist Workshops
 author: Eric D. Schabell
-description: My presentations on all things Ingetration and BPM
+description: My workshops around OpenShift, xPaaS, & Ingetration and BPM
 
 profiles:
   development:
