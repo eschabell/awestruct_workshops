@@ -21,11 +21,15 @@ layout: jtebase
 
         `$ git clone https://github.com/eschabell/brms-coolstore-demo.git`
 
+      * Build the web application.
+
+        `$ cd projects/brms-coolstore-demo`
+
+        `$ mvn package`
+
       * Deploy the web application into your brms-install-demo project.
 
-        `$ cd brms-coolstore-demo`
-
-        `$ cp support/brms-coolstore-demo.war brms-install-demo/target/jboss-eap-6.1/standalone/deployments/`
+        `$ cp target/brms-coolstore-demo.war ../../target/jboss-eap-6.1/standalone/deployments/`
 
 
   %section(data-state="cycling" )
